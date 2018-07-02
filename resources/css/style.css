@@ -3,56 +3,71 @@ body {
   font-family: "Helvetica", sans-serif;
   font-size: 16px;
   line-height: 1.2;
+  background-color: #EDFAFF;
 }
 
 .container {
-  max-width: 1024px;
-  margin: auto;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+p {
+  font-family: "Helvetica", sans-serif;
 }
 
 header {
-  max-height: 4rem;
+  width: 100%;
   position: fixed;
-  z-index: 1;
   top: 0;
+  z-index: 1;
+}
+
+header .content {
+  background-color: white;
+  height: 4rem;
+  /*padding: 0 1.5rem;*/
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 header div {
-  width: 10rem;
   display: flex;
   align-items: center;
 }
 
-header div p {
+header div span,
+header div img {
   height: 2rem;
+  display: flex;
+  align-items: center;
 }
 
-p.title:first-child {
-  font-weight: 700;
+header .logo-main {
+  margin-left: 1.5rem;
 }
 
-p.title:last-child {
-  font-weight: 200;
+header span .title-bold {
+  font-weight: 900;
+}
+
+header span.title-thin {
+  font-weight: 100;
 }
 
 header nav {
   padding: 0 1.5rem;
-  /*width: 20%;*/
   display: flex;
   align-items: center;
-  justify-content: flex-end;
 }
 
-nav {
+nav ul {
   display: flex;
   align-items: center;
 }
 
 nav li {
-  padding: 0 1.5rem;
+  padding-left: 1rem;
 }
 
 nav li a {
@@ -61,18 +76,199 @@ nav li a {
 }
 
 .banner {
-  margin-top: 2rem;
+  margin-top: 4rem;
   display: flex;
-
+  align-items: center;
+  background-color: rgb(234,235,236);/*#eaebec;*/
 }
 
+.banner img {
+  width: 60%;
+  height: auto;
+  padding: 2rem 1.5rem;
+}
+
+.banner-start {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem;
+}
+
+.banner-start h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.banner-start p {
+  padding: 2rem 0;
+}
+
+.button-start a {
+  color: black;
+  text-decoration: none;
+}
 .button-start {
   padding: 0.5rem 0;
-  max-width: 10rem;
+  max-width: 14rem;
   background-color: grey;
   text-align: center;
+  border-radius: 0.5rem;
+  transition: background-color 150ms linear;
 }
 
 .button-start:hover {
   background-color: red;
+}
+
+.button-start:active {
+  font-weight: bold;
+  box-shadow: 1px 1px #888888;
+}
+
+
+.happenings {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+/*div .happenings-main {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 60%;
+  margin: 0;
+  border: 1px solid black;
+}*/
+
+.happenings-main {
+  border: 1px solid black;
+  width: 60%;
+  padding: 2rem 1.5rem;
+}
+
+.happenings-main h2 {
+  text-transform: capitalize;
+  font-weight: bold;
+  padding-top: 2rem;
+  font-size: 2rem;
+}
+
+.happenings-main img {
+  width: 100%;
+  height: auto;
+  /*padding: 2rem 1.5rem;*/
+}
+
+.happenings-main p {
+  /*width: 60%;*/
+  padding-top: 1.5rem;
+  font-family: "Helvetica", sans-serif;
+}
+
+p .citation {
+  font-size: 0.5rem;
+  margin-top: 10rem;
+}
+
+.happenings-boxes {
+  width: 40%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  /*border: 1px solid black;*/
+}
+
+.happenings-box {
+  /*padding: 1rem;*/
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 2px solid grey;
+  /*flex-direction: row;*/
+}
+
+.happenings-box img {
+  padding: 1rem;
+  width: 35%;
+  height: auto;
+}
+
+.happenings-box h4 {
+  font-weight: bold;
+}
+
+.happenings-box .info-text {
+  /*width: 65%;*/
+}
+
+.info-text p {
+  padding: 0.5rem 0;
+}
+
+.info-text a {
+  text-decoration: none;
+}
+
+
+
+
+
+
+.start-learning {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eaebec;
+  flex-direction: column;
+}
+
+.start-learning h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: center;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.learning-boxes {
+  display: flex;
+  flex-direction: row;
+  /*padding: 0 4.5rem;*/
+  padding: 0 3.5rem;
+  /*flex-grow: 1;*/
+}
+
+.learning-box {
+  margin: 1rem 1rem;
+  width: 100%;
+
+  background-color: white;
+  align-items: stretch;
+}
+
+.learning-box img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+.learning-text-box {
+  padding:1rem;
+}
+
+.learning-text-box h4 {
+  /*margin-top: 2rem;*/
+  font-weight: bold;
+}
+
+.learning-text-box p {
+  padding-top: 0.5rem;
+}
+
+.learning-course-info {
+  margin-bottom: 1.5rem;
 }
